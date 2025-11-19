@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Juice Cheerfull – Pastel Pink</title>
+
+  <!-- Poppins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Feather Icons -->
+  <script src="https://unpkg.com/feather-icons"></script>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <a href="#" class="navbar-logo">JUICE <span>CHEERFULL</span></a>
+
+    <div class="navbar-nav">
+      <a href="#home">Home</a>
+      <a href="#about">Tentang Kami</a>
+      <a href="#menu">Menu</a>
+      <a href="#product">Produk</a>
+      <a href="#contact">Kontak</a>
+    </div>
+
+    <div class="navbar-extra">
+      <a href="#" id="search-button" aria-label="Cari"><i data-feather="search"></i></a>
+      <a href="#" id="shopping-cart-button" aria-label="Keranjang">
+        <i data-feather="shopping-cart"></i>
+        <span class="badge" id="cart-count">0</span>
+      </a>
+      <a href="#" id="hamburger-menu" aria-label="Menu"><i data-feather="menu"></i></a>
+    </div>
+
+    <!-- CART DROPDOWN -->
+    <div class="shopping-cart" id="cart">
+      <h3>Keranjang Belanja</h3>
+      <div id="cart-items" class="cart-items"></div>
+
+      <div class="cart-footer">
+        <div class="total">Total: <span id="total-price">Rp 0</span></div>
+        <button class="btn primary" id="checkout-btn" type="button">Checkout</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- SEARCH -->
+  <div class="search-form" id="search-form">
+    <input type="search" id="search-box" placeholder="Cari jus (contoh: mangga, naga)..." />
+    <label for="search-box"><i data-feather="search"></i></label>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+  <div class="content">
+    <h1>Nikmati <span>Kesegaran</span> Tiap Teguk</h1>
+    <p>Jus segar warna pastel—cantik, sehat, dan fresh.</p>
+    <a href="#menu" class="cta">Pesan Sekarang</a>
+  </div>
+
+  <div class="hero-img">
+    <img src="img/ju5.jpgs.jpg" alt="Jus Segar Cheerfull">
+  </div>
+</section>
+
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+    <h2><span>Tentang Kami</span></h2>
+    <div class="row">
+      <div class="about-img">
+        <img src="img/jus4.jpg" alt="Tentang Jus Cheerfull">
+      </div>
+
+      <div class="content">
+        <h3>Jus alami setiap hari</h3>
+        <p>Kami menggunakan buah segar, tanpa bahan kimia, warna cantik alami.</p>
+        <ul class="tick">
+          <li>Buah segar harian</li>
+          <li>Tanpa pemanis buatan</li>
+          <li>Rasa konsisten</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- MENU -->
+  <section class="menu" id="menu">
+    <h2><span>Menu</span> Kami</h2>
+
+    <div class="row">
+      <!-- Pastikan setiap kartu punya data-name & data-price -->
+      <div class="menu-card" data-name="Jus Mangga" data-price="15000">
+        <img src="img/mangga.jpg" class="menu-card-img" alt="Jus Mangga">
+        <h3 class="menu-card-title">Jus Mangga Bahagia</h3>
+        <p class="menu-card-desc">Manis alami dari mangga segar yang bikin mood langsung ceria!
+</p>
+        <p class="menu-card-price">Rp 15.000</p>
+        
+<!-- Qty -->
+    <div class="qty-field">
+      <button type="button" class="qty-minus">-</button>
+      <input type="number" class="qty" min="1" value="1">
+      <button type="button" class="qty-plus">+</button>
+    </div>
+
+    <button class="btn add-to-cart">Tambah ke Keranjang</button>
+</div>
+      
+      <div class="menu-card" data-name="Jus Naga" data-price="17000">
+        <img src="img/jus-naga.jpg" class="menu-card-img" alt="Jus Naga">
+        <h3 class="menu-card-title">Jus Naga Ceria</h3>
+        <p class="menu-card-desc">Ungu lembut dan sehat.</p>
+        <p class="menu-card-price">Rp 17.000</p>
+        <!-- Qty -->
+    <div class="qty-field">
+      <button type="button" class="qty-minus">-</button>
+      <input type="number" class="qty" min="1" value="1">
+      <button type="button" class="qty-plus">+</button>
+    </div>
+
+    <button class="btn add-to-cart">Tambah ke Keranjang</button>
+</div>
+
+      <div class="menu-card" data-name="Jus Alpukat" data-price="18000">
+        <img src="img/jus-alpukat.jpg" class="menu-card-img" alt="Jus Alpukat">
+        <h3 class="menu-card-title">Jus Alpukat</h3>
+        <p class="menu-card-desc">Kental, creamy, dan pas banget buat teman santaimu.
+.</p>
+        <p class="menu-card-price">Rp 18.000</p>
+
+        <!-- Qty -->
+    <div class="qty-field">
+      <button type="button" class="qty-minus">-</button>
+      <input type="number" class="qty" min="1" value="1">
+      <button type="button" class="qty-plus">+</button>
+    </div>
+
+        <button class="btn add-to-cart">Tambah ke Keranjang</button>
+        </div>
+
+        
+      <div class="menu-card" data-name="Jus Jambu" data-price="17000">
+        <img src="img/jus-jambu.jpg" class="menu-card-img" alt="Jus Naga">
+        <h3 class="menu-card-title">Jus Jambu</h3>
+        <p class="menu-card-desc">Kaya vitamin C, bikin kulitmu makin glowing!</p>
+        <p class="menu-card-price">Rp 17.000</p>
+        <!-- Qty -->
+    <div class="qty-field">
+      <button type="button" class="qty-minus">-</button>
+      <input type="number" class="qty" min="1" value="1">
+      <button type="button" class="qty-plus">+</button>
+    </div>
+
+    <button class="btn add-to-cart">Tambah ke Keranjang</button>
+</div>
+
+      <div class="menu-card" data-name="Jus Strawberry" data-price="17000">
+        <img src="img/jus-strawberryi.jpg" class="menu-card-img" alt="Jus Naga">
+        <h3 class="menu-card-title">Jus Strawberry</h3>
+        <p class="menu-card-desc">Pink lembut dan sehat.</p>
+        <p class="menu-card-price">Rp 17.000</p>
+        <!-- Qty -->
+    <div class="qty-field">
+      <button type="button" class="qty-minus">-</button>
+      <input type="number" class="qty" min="1" value="1">
+      <button type="button" class="qty-plus">+</button>
+    </div>
+
+    <button class="btn add-to-cart">Tambah ke Keranjang</button>
+</div>
+
+      <div class="menu-card" data-name="Jus Jeruk" data-price="17000">
+        <img src="img/jus-jeruk.jpg" class="menu-card-img" alt="Jus Jeruk">
+        <h3 class="menu-card-title">Jus Jeruk</h3>
+        <p class="menu-card-desc">Rasa segar alami jeruk peras yang membangkitkan semangatmu!.</p>
+        <p class="menu-card-price">Rp 17.000</p>
+        <!-- Qty -->
+    <div class="qty-field">
+      <button type="button" class="qty-minus">-</button>
+      <input type="number" class="qty" min="1" value="1">
+      <button type="button" class="qty-plus">+</button>
+    </div>
+
+    <button class="btn add-to-cart">Tambah ke Keranjang</button>
+</div>
+
+      <div class="menu-card" data-name="Jus Apel" data-price="17000">
+        <img src="img/jus-apel.jpg" class="menu-card-img" alt="Jus Apel">
+        <h3 class="menu-card-title">Jus Apel</h3>
+        <p class="menu-card-desc">Paduan rasa manis dan asam yang pas di lidah.</p>
+        <p class="menu-card-price">Rp 17.000</p>
+        <!-- Qty -->
+    <div class="qty-field">
+      <button type="button" class="qty-minus">-</button>
+      <input type="number" class="qty" min="1" value="1">
+      <button type="button" class="qty-plus">+</button>
+    </div>
+
+    <button class="btn add-to-cart">Tambah ke Keranjang</button>
+</div>
+
+      <div class="menu-card" data-name="Melon" data-price="17000">
+        <img src="img/jus-melon.jpg" class="menu-card-img" alt="Jus Melon">
+        <h3 class="menu-card-title">Jus Melon</h3>
+        <p class="menu-card-desc">Lembut, manis, dan super menyegarkan!</p>
+        <p class="menu-card-price">Rp 17.000</p>
+        <!-- Qty -->
+    <div class="qty-field">
+      <button type="button" class="qty-minus">-</button>
+      <input type="number" class="qty" min="1" value="1">
+      <button type="button" class="qty-plus">+</button>
+    </div>
+
+    <button class="btn add-to-cart">Tambah ke Keranjang</button>
+</div>
+
+      <div class="menu-card" data-name="Jus Sirsak" data-price="17000">
+        <img src="img/jus-sirsak.jpg" class="menu-card-img" alt="Jus Sirsak">
+        <h3 class="menu-card-title">Jus Sirsak</h3>
+        <p class="menu-card-desc">Lembut dan unik, cocok untuk pencinta rasa eksotis.</p>
+        <p class="menu-card-price">Rp 17.000</p>
+        <!-- Qty -->
+    <div class="qty-field">
+      <button type="button" class="qty-minus">-</button>
+      <input type="number" class="qty" min="1" value="1">
+      <button type="button" class="qty-plus">+</button>
+    </div>
+
+    <button class="btn add-to-cart">Tambah ke Keranjang</button>
+</div>
+<div class="menu-card" data-name="Jus Semangka" data-price="17000">
+        <img src="img/semangka.jpg" class="menu-card-img" alt="Jus Semangka">
+        <h3 class="menu-card-title">Jus Semangka</h3>
+        <p class="menu-card-desc">Rasa segar dan ringan, cocok diminum kapan saja!</p>
+        <p class="menu-card-price">Rp 17.000</p>
+        <!-- Qty -->
+    <div class="qty-field">
+      <button type="button" class="qty-minus">-</button>
+      <input type="number" class="qty" min="1" value="1">
+      <button type="button" class="qty-plus">+</button>
+    </div>
+
+    <button class="btn add-to-cart">Tambah ke Keranjang</button>
+</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUCTS -->
+<section class="product" id="product">
+  <h2><span>Produk</span> Unggulan</h2>
+
+  <div class="row">
+
+    <!-- CARD 1 -->
+    <div class="product-card" data-name="Botol Jus Naga" data-price="20000">
+      <img src="img/bottlejus-naga.jpg" class="product-img" alt="Botol Jus Naga">
+      <h3>Jus Naga Botol</h3>
+      <p class="product-price">Rp 20.000</p>
+
+      <!-- Qty control -->
+      <div class="qty-field">
+        <button type="button" class="qty-minus">-</button>
+        <input type="number" class="qty" min="1" value="1">
+        <button type="button" class="qty-plus">+</button>
+      </div>
+
+      <button class="btn add-to-cart">Tambah ke Keranjang</button>
+    </div>
+     <!-- CARD 1 -->
+    <div class="product-card" data-name="Paket Ceria Mix" data-price="20000">
+      <img src="img/jusmix.jpg" class="product-img" alt="Isi 3 varian rasa (Naga, Mangga, Alpukat) dalam satu box cantik.
+">
+      <h3>Jus Naga Botol</h3>
+      <p class="product-price">Rp 25.000</p>
+
+      <!-- Qty control -->
+      <div class="qty-field">
+        <button type="button" class="qty-minus">-</button>
+        <input type="number" class="qty" min="1" value="1">
+        <button type="button" class="qty-plus">+</button>
+      </div>
+
+      <button class="btn add-to-cart">Tambah ke Keranjang</button>
+    </div>
+
+    <!-- CARD 2 -->
+    <div class="product-card" data-name="Botol Jus Mangga" data-price="18000">
+      <img src="img/bottlemangga.jpg" class="product-img" alt="Botol Jus Mangga">
+      <h3>Jus Mangga Botol</h3>
+      <p class="product-price">Rp 18.000</p>
+
+      <!-- Qty control -->
+      <div class="qty-field">
+        <button type="button" class="qty-minus">-</button>
+        <input type="number" class="qty" min="1" value="1">
+        <button type="button" class="qty-plus">+</button>
+      </div>
+
+      <button class="btn add-to-cart">Tambah ke Keranjang</button>
+    </div>
+
+      
+  </div>
+</section>
+
+  <!-- INFO BOX -->
+  <div class="keranjang-info">
+    🛒 <span id="badge-bottom">0</span> item | Total: <span id="total-bottom">Rp 0</span>
+  </div>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <h2><span>Kontak</span> Kami</h2>
+
+    <div class="row">
+      <iframe src="https://www.google.com/maps/embed?..." loading="lazy"></iframe>
+
+      <form>
+        <div class="input-group">
+          <i data-feather="user"></i>
+          <input type="text" placeholder="Nama">
+        </div>
+
+        <div class="input-group">
+          <i data-feather="mail"></i>
+          <input type="text" placeholder="Email">
+        </div>
+
+        <div class="input-group">
+          <i data-feather="phone"></i>
+          <input type="text" placeholder="No HP">
+        </div>
+
+        <button class="btn primary" type="button">Kirim Pesan</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="socials">
+      <a><i data-feather="instagram"></i></a>
+      <a><i data-feather="twitter"></i></a>
+      <a><i data-feather="facebook"></i></a>
+    </div>
+
+    <div class="links">
+      <a href="#home">Home</a>
+      <a href="#about">Tentang Kami</a>
+      <a href="#menu">Menu</a>
+      <a href="#contact">Kontak</a>
+    </div>
+
+    <div class="credit">
+      <p>Created by <a href="">njwannsftr</a> © 2025</p>
+    </div>
+  </footer>
+
+  <!-- JS (pastikan di bawah, setelah semua elemen dibuat) -->
+  <script src="js/script.js"></script>
+  <script>feather.replace();</script>
+</body>
+</html>
